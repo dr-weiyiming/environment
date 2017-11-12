@@ -4,7 +4,7 @@
 deep learning config:
 
 1.opencv: 
-  编译错误/无法通过, cuda --> CUDA_GENERATION=Kepler
+  编译错误/无法通过
   cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D CUDA_GENERATION=Kepler ..
 
 2.matlab:  
