@@ -1,9 +1,9 @@
-# environment
+# Ubuntu
 
 
-deep learning config:
 
-1.opencv:
+
+##opencv:
 
   编译错误/无法通过
   
