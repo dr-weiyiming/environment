@@ -18,3 +18,13 @@
 ## sougou输入法：
 
   安装教程 http://blog.csdn.net/leijiezhang/article/details/53707181
+
+## Docker:
+###文件挂载：
+例： docker run -it -v /home/dock/Downloads:/usr/Downloads ubuntu64 /bin/bash
+通过-v参数，冒号前为宿主机目录，必须为绝对路径，冒号后为镜像内挂载的路径
+
+###镜像/容器删除：
+
+###更新容器：
+docker commit 
