@@ -24,6 +24,9 @@
   sudo make -j8 #多核编译
   
   sudo make install
+  
+## gcc版本切换
+http://blog.csdn.net/robertchenguangzhi/article/details/47837445
 
 ## matlab:  
 
