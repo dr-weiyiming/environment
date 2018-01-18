@@ -44,6 +44,14 @@ http://blog.csdn.net/robertchenguangzhi/article/details/47837445
     sudo apt-get install libopenblas-dev liblapack-dev libatlas-base-dev
     
     sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
+    
+    sudo gedit /etc/modprobe.d/blacklist.conf 加入blacklist nouveau
+    sudo update-initramfs -u 重启
+    
+    sudo service lightdm stop
+    cd ~
+    sudo ./NVIDIA-Linux-x86_64-375.66.run --no-opengl-files --no-x-check --no-nouveau-check
+    sudo nvidia-smi
 
 ## sougou：
 
