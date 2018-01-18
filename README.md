@@ -13,10 +13,11 @@
 
 
 ## opencv:
-
-  编译错误/无法通过
-  
+  mkdir release
+  cd release
   cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D CUDA_GENERATION=Kepler ..
+  sudo make -j8 #多核编译
+  sudo make install
 
 ## matlab:  
 
