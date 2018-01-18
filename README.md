@@ -13,6 +13,8 @@
 
 
 ## opencv:
+  opencv-2.4.13
+
   mkdir release
   
   cd release
