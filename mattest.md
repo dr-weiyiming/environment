@@ -12,6 +12,7 @@ caffe.set_mode_cpu();
 
 ##1. 网上解决方案
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4:/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4:/usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4:/usr/lib/x86_64-linux-gnu/libstdc++.so.6:/usr/lib/x86_64-linux-gnu/libfreetype.so.6
+
 export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/
 
 再执行测试：make mattest
@@ -25,7 +26,9 @@ export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/
 ##2. matlab 文件权限问题
 
 An error was encountered while saving the command history
-java.io.FileNotFoundException: /home/userA/.matlab/R2014b/History.xml (Permission denied)
+
+java.io.FileNotFoundException: /home/userA/.matlab/R2014b/History.xml (Permission denied) 
+    
     at java.io.RandomAccessFile.open(Native Method)
     at java.io.RandomAccessFile.<init>(Unknown Source)
     at com.mathworks.mde.cmdhist.AltHistoryCollection$CommandSaver.run(AltHistoryCollection.java:1212)
