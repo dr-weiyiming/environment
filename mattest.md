@@ -69,3 +69,14 @@ make mattest
 2 从终端启动matlab，切换到目录 ~/caffe/matlab/demo/（很重要）
 3输入命令 run('classification_demo.m')或者双击打开classification_demo.m点击上面的“Run”即可。
 4输出是一个1000×1的矩阵，因为ImageNet数据集有1000个类别。
+
+## matlab 文件权限问题
+
+An error was encountered while saving the command history
+java.io.FileNotFoundException: /home/userA/.matlab/R2014b/History.xml (Permission denied)
+    at java.io.RandomAccessFile.open(Native Method)
+    at java.io.RandomAccessFile.<init>(Unknown Source)
+    at com.mathworks.mde.cmdhist.AltHistoryCollection$CommandSaver.run(AltHistoryCollection.java:1212)
+    at java.lang.Thread.run(Unknown Source)
+## 解决方案： sudo chmod -R 777 .matlab
+
