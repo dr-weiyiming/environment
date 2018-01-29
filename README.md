@@ -14,7 +14,7 @@
     sudo nvidia-smi
 
 ### Docker
-    https://docs.docker.com/install/linux/docker-ce/ubuntu/#uninstall-old-versions    
+    [https://docs.docker.com/install/linux/docker-ce/ubuntu/#uninstall-old-versions]    
 
 ## cudnn
     下载地址：https://developer.nvidia.com/rdp/cudnn-download
