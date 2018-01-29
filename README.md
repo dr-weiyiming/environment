@@ -12,7 +12,7 @@
         --no-nouveau-check 安装驱动时不检查nouveau
         后面两个参数可不加。
     sudo nvidia-smi
-#### tensorflow 
+#### tensorflow
     选用版本：
     nvidia/cuda:8.0-cudnn5-devel
     docker镜像内安装
@@ -25,6 +25,9 @@
         >>> hello = tf.constant('Hello, TensorFlow!')
         >>> sess = tf.Session()
         >>> print(sess.run(hello))
+        
+ #### [cv2下载地址（tf环境下）](https://anaconda.org/menpo/opencv3/files)
+       
         
     
 #### [nvidia-docker安装](https://github.com/NVIDIA/nvidia-docker) vs [教程](https://devblogs.nvidia.com/nvidia-docker-gpu-server-application-deployment-made-easy/) 
