@@ -16,7 +16,7 @@
     选用版本：
     nvidia/cuda:8.0-cudnn5-devel
     Anaconda3-5.0.1-Linux-x86_64
-    pip install tensorflow==1.2
+    pip install tensorflow_gpu==1.2
         （导入错误...cudnn版本与tensorflow不一致，libcudart.so）
     
 #### [nvidia-docker安装](https://github.com/NVIDIA/nvidia-docker) vs [教程](https://devblogs.nvidia.com/nvidia-docker-gpu-server-application-deployment-made-easy/) 
