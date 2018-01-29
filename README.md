@@ -13,6 +13,11 @@
         后面两个参数可不加。
     sudo nvidia-smi
 
+### Docker[https://docs.docker.com/install/linux/docker-ce/ubuntu/#uninstall-old-versions]
+    
+    sudo apt-get remove docker docker-engine docker.io
+    
+
 ## cudnn
     下载地址：https://developer.nvidia.com/rdp/cudnn-download
 
