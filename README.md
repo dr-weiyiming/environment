@@ -26,7 +26,10 @@
         >>> sess = tf.Session()
         >>> print(sess.run(hello))
         
- #### python环境[cv2下载](https://anaconda.org/menpo/opencv3/files)
+ #### python环境[cv2](https://anaconda.org/menpo/opencv3/files)
+    文件下载：linux-64-opencv3-3.1.0-py27_0.tar.bz2
+    conda install --channel menpo linux-64-opencv3-3.1.0-py27_0.tar.bz2
+    卸载：conda uninstall opencv3
        
         
     
