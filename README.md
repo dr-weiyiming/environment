@@ -13,11 +13,9 @@
         后面两个参数可不加。
     sudo nvidia-smi
 
-#### [nvidia-docker安装](https://github.com/NVIDIA/nvidia-docker) vs [教程](https://devblogs.nvidia.com/nvidia-docker-gpu-server-application-deployment-made-easy/)
-    第一步不能省略，base image
-        nvidia-docker pull nvidia/cuda 
-    根据需要，选择下载所需cuda版本
-        nvidia-docker run --rm -ti nvidia/cuda:8.0 nvcc --version 
+#### [nvidia-docker安装](https://github.com/NVIDIA/nvidia-docker) vs [教程](https://devblogs.nvidia.com/nvidia-docker-gpu-server-application-deployment-made-easy/) 
+    根据需要，选择下载所需cuda版本,tag要正确！！
+        nvidia-docker run --rm -ti nvidia/cuda:8.0-cudnn5-devel nvcc --version 
 
 #### [Docker安装](https://docs.docker.com/install/linux/docker-ce/ubuntu/) 
     免输入sudo
