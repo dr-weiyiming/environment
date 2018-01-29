@@ -26,7 +26,7 @@
         >>> sess = tf.Session()
         >>> print(sess.run(hello))
         
- #### [cv2下载地址（tf环境下）](https://anaconda.org/menpo/opencv3/files)
+ #### python环境[cv2下载](https://anaconda.org/menpo/opencv3/files)
        
         
     
