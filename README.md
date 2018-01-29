@@ -14,6 +14,10 @@
     sudo nvidia-smi
 
 #### [Docker安装](https://docs.docker.com/install/linux/docker-ce/ubuntu/) 
+    免输入sudo
+        sudo groupadd docker
+        sudo usermod -aG docker $USER
+        注销并重新登录用户
     查看镜像 
         docker images
     进入容器 
