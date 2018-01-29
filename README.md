@@ -58,6 +58,9 @@ http://blog.csdn.net/robertchenguangzhi/article/details/47837445
   安装教程 http://blog.csdn.net/leijiezhang/article/details/53707181
 
 ## Docker:
+### 进入容器 docker run -t -i <容器> /bin/bash
+
+
 1. 文件挂载：
     例： docker run -it -v /home/dock/Downloads:/usr/Downloads ubuntu64 /bin/bash
     通过-v参数，冒号前为宿主机目录，必须为绝对路径，冒号后为镜像内挂载的路径
@@ -85,8 +88,8 @@ http://blog.csdn.net/robertchenguangzhi/article/details/47837445
 
     想要删除untagged images，也就是那些id为<None>的image的话可以用
 
-docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
+    docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
 
-要删除全部image的话
+    要删除全部image的话
 
-docker rmi $(docker images -q)
+    docker rmi $(docker images -q)
