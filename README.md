@@ -18,7 +18,7 @@
         nvidia-docker pull nvidia/cuda 
     根据需要，选择下载所需cuda版本
         nvidia-docker run --rm -ti nvidia/cuda:8.0 nvcc --version 
-    
+
 #### [Docker安装](https://docs.docker.com/install/linux/docker-ce/ubuntu/) 
     免输入sudo
         sudo groupadd docker
@@ -46,6 +46,20 @@
             docker rmi $(docker images -q)
     镜像无法删除解决方案
         https://github.com/moby/moby/issues/17304
+        常见问题：
+        多个镜像ImageID一样，解决方法
+            wei@wei-PC:~$ docker images
+            REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+            nvidia/cuda         latest              e2b6067aaeb5        11 days ago         2.18GB
+            nvidia/cuda         7.0                 a60a3c83aeed        2 weeks ago         0B
+            nvidia/cuda         8.0                 a60a3c83aeed        2 weeks ago         0B
+            hello-world         latest              f2a91732366c        2 months ago        1.85kB
+            wei@wei-PC:~$ docker images ubuntu | tail -n +2 | awk '{ print $1 ":" $2}' | xargs docker rmi nvidia/cuda:8.0
+            Untagged: nvidia/cuda:8.0
+            wei@wei-PC:~$ docker images ubuntu | tail -n +2 | awk '{ print $1 ":" $2}' | xargs docker rmi nvidia/cuda:7.0
+            Untagged: nvidia/cuda:7.0
+
+
 
 #### [cudnn下载](https://developer.nvidia.com/rdp/cudnn-download)
 
