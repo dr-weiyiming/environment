@@ -62,7 +62,31 @@ http://blog.csdn.net/robertchenguangzhi/article/details/47837445
     例： docker run -it -v /home/dock/Downloads:/usr/Downloads ubuntu64 /bin/bash
     通过-v参数，冒号前为宿主机目录，必须为绝对路径，冒号后为镜像内挂载的路径
 
-2. 镜像/容器删除：
+2. 更新容器：
+    docker commit <容器id> <镜像名称>
+    
+3. Docker 容器镜像删除
 
-3. 更新容器：
-    docker commit 
+    停止所有的container，这样才能够删除其中的images：
+
+    docker stop $(docker ps -a -q)
+
+    如果想要删除所有container的话再加一个指令：
+
+    docker rm $(docker ps -a -q)
+
+    2.查看当前有些什么images
+
+    docker images
+
+    3.删除images，通过image的id来指定删除谁
+
+    docker rmi <image id>
+
+    想要删除untagged images，也就是那些id为<None>的image的话可以用
+
+docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
+
+要删除全部image的话
+
+docker rmi $(docker images -q)
