@@ -11,6 +11,8 @@
     --no-nouveau-check 安装驱动时不检查nouveau
     后面两个参数可不加。
 
+## cudnn
+下载地址：https://developer.nvidia.com/rdp/cudnn-download
 
 ## opencv:
   opencv-2.4.13
