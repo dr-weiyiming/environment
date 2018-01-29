@@ -41,7 +41,7 @@
             docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
         要删除全部image的话
             docker rmi $(docker images -q)
-   #####[无法删除解决方案](https://github.com/moby/moby/issues/17304)
+    [镜像删除解决方案](https://github.com/moby/moby/issues/17304)
 
 #### [cudnn下载](https://developer.nvidia.com/rdp/cudnn-download)
 
