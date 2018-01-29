@@ -18,26 +18,19 @@
 #### [cudnn下载](https://developer.nvidia.com/rdp/cudnn-download)
 
 #### opencv:
-  opencv-2.4.13
-
-  mkdir release
+    opencv-2.4.13
+    mkdir release
+    cd release
+    cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D CUDA_GENERATION=Kepler ..
+    sudo make -j8 #多核编译
+    sudo make install
   
-  cd release
-  
-  cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D CUDA_GENERATION=Kepler ..
-  
-  sudo make -j8 #多核编译
-  
-  sudo make install
-  
-#### gcc版本切换
-http://blog.csdn.net/robertchenguangzhi/article/details/47837445
+#### [gcc版本切换](http://blog.csdn.net/robertchenguangzhi/article/details/47837445)
 
 #### matlab:  
 
-  创建快捷方式
-  
-  ~/.bashrc中添加 export PATH=/usr/local/MATLAB/R2014a/bin:$PATH最终直接在终端输入’matlab’就可以打开Matlab
+    创建快捷方式
+    ~/.bashrc中添加 export PATH=/usr/local/MATLAB/R2014a/bin:$PATH最终直接在终端输入’matlab’就可以打开Matlab
   
 #### cafe
   依赖
