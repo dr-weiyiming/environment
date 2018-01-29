@@ -27,7 +27,7 @@
     进入容器 
         docker run -t -i <容器> /bin/bash
     文件挂载：
-        例： docker run -it -v /home/dock/Downloads:/usr/Downloads ubuntu64 /bin/bash
+        例： docker run -it -v /home/wei/下载:/weiyiming nvidia:cuda8.0-cudnn5 /bin/bash
         通过-v参数，冒号前为宿主机目录，必须为绝对路径，冒号后为镜像内挂载的路径
     更新容器：
         docker commit <容器id> <镜像名称>
