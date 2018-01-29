@@ -1,18 +1,20 @@
 # Ubuntu
 
-## Nividia Driver
-
-    安装(注意 参数)
-
-    sudo ./NVIDIA-Linux-x86_64-375.20.run --no-opengl-files --no-x-check --no-nouveau-check
-
-    --no-opengl-files 只安装驱动文件，不安装OpenGL文件。这个参数最重要, 防止循环登录
-    --no-x-check 安装驱动时不检查X服务
-    --no-nouveau-check 安装驱动时不检查nouveau
-    后面两个参数可不加。
+### Nividia Driver
+    sudo gedit /etc/modprobe.d/blacklist.conf
+    最后一行加上 blacklist nouveau
+    sudo update-initramfs -u 
+    重启电脑
+    sudo service lightdm stop
+    sudo ./NVIDIA-Linux-x86_64-375.66.run --no-opengl-files --no-x-check --no-nouveau-check
+        --no-opengl-files 只安装驱动文件，不安装OpenGL文件。这个参数最重要, 防止循环登录
+        --no-x-check 安装驱动时不检查X服务
+        --no-nouveau-check 安装驱动时不检查nouveau
+        后面两个参数可不加。
+    sudo nvidia-smi
 
 ## cudnn
-下载地址：https://developer.nvidia.com/rdp/cudnn-download
+    下载地址：https://developer.nvidia.com/rdp/cudnn-download
 
 ## opencv:
   opencv-2.4.13
