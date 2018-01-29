@@ -76,7 +76,7 @@
 #### matlab创建快捷方式
     ~/.bashrc中添加 export PATH=/usr/local/MATLAB/R2014a/bin:$PATH最终直接在终端输入’matlab’就可以打开Matlab
    
-#### cafe
+#### caffe
     依赖
     sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
     sudo apt-get install --no-install-recommends libboost-all-dev
