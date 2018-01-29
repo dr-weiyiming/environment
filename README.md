@@ -14,7 +14,7 @@
     sudo nvidia-smi
 
 #### [nvidia-docker安装](https://github.com/NVIDIA/nvidia-docker)
-     [教程]（https://devblogs.nvidia.com/nvidia-docker-gpu-server-application-deployment-made-easy/）
+   [教程](https://devblogs.nvidia.com/nvidia-docker-gpu-server-application-deployment-made-easy/)
     
 #### [Docker安装](https://docs.docker.com/install/linux/docker-ce/ubuntu/) 
     免输入sudo
