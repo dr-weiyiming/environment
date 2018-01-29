@@ -13,8 +13,8 @@
         后面两个参数可不加。
     sudo nvidia-smi
 
-#### [nvidia-docker安装](https://github.com/NVIDIA/nvidia-docker)  
-  [教程](https://devblogs.nvidia.com/nvidia-docker-gpu-server-application-deployment-made-easy/)
+#### [nvidia-docker安装](https://github.com/NVIDIA/nvidia-docker)  [教程](https://devblogs.nvidia.com/nvidia-docker-gpu-server-application-deployment-made-easy/)
+    
     
 #### [Docker安装](https://docs.docker.com/install/linux/docker-ce/ubuntu/) 
     免输入sudo
@@ -41,6 +41,7 @@
             docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
         要删除全部image的话
             docker rmi $(docker images -q)
+   #####[无法删除解决方案](https://github.com/moby/moby/issues/17304)
 
 #### [cudnn下载](https://developer.nvidia.com/rdp/cudnn-download)
 
