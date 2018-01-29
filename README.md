@@ -42,7 +42,7 @@
         要删除全部image的话
             docker rmi $(docker images -q)
     镜像删除解决方案
-    (https://github.com/moby/moby/issues/17304)
+        https://github.com/moby/moby/issues/17304
 
 #### [cudnn下载](https://developer.nvidia.com/rdp/cudnn-download)
 
