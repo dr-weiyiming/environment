@@ -1,6 +1,6 @@
 # Ubuntu
 
-### Nividia Driver
+#### Nividia Driver
     sudo gedit /etc/modprobe.d/blacklist.conf
     最后一行加上 blacklist nouveau
     sudo update-initramfs -u 
@@ -13,11 +13,11 @@
         后面两个参数可不加。
     sudo nvidia-smi
 
-### [Docker安装](https://docs.docker.com/install/linux/docker-ce/ubuntu/)  
+#### [Docker安装](https://docs.docker.com/install/linux/docker-ce/ubuntu/)  
 
-## [cudnn下载](https://developer.nvidia.com/rdp/cudnn-download)
+#### [cudnn下载](https://developer.nvidia.com/rdp/cudnn-download)
 
-## opencv:
+#### opencv:
   opencv-2.4.13
 
   mkdir release
@@ -30,16 +30,16 @@
   
   sudo make install
   
-## gcc版本切换
+#### gcc版本切换
 http://blog.csdn.net/robertchenguangzhi/article/details/47837445
 
-## matlab:  
+#### matlab:  
 
   创建快捷方式
   
   ~/.bashrc中添加 export PATH=/usr/local/MATLAB/R2014a/bin:$PATH最终直接在终端输入’matlab’就可以打开Matlab
   
-## cafe
+#### cafe
   依赖
     
     sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
@@ -58,7 +58,7 @@ http://blog.csdn.net/robertchenguangzhi/article/details/47837445
     sudo ./NVIDIA-Linux-x86_64-375.66.run --no-opengl-files --no-x-check --no-nouveau-check
     sudo nvidia-smi
 
-## sougou：
+#### sougou：
 
   安装教程 http://blog.csdn.net/leijiezhang/article/details/53707181
 
