@@ -13,8 +13,12 @@
         后面两个参数可不加。
     sudo nvidia-smi
 #### tensorflow 
-    导入错误...cudnn版本与tensorflow不一致
-    libcudart.so
+    选用版本：
+    nvidia/cuda:8.0-cudnn5-devel
+    Anaconda3-5.0.1-Linux-x86_64
+    pip install tensorflow==1.2
+        （导入错误...cudnn版本与tensorflow不一致，libcudart.so）
+    
 #### [nvidia-docker安装](https://github.com/NVIDIA/nvidia-docker) vs [教程](https://devblogs.nvidia.com/nvidia-docker-gpu-server-application-deployment-made-easy/) 
     根据需要，选择下载所需cuda版本以及cudnn版本,tag要正确！！
         nvidia-docker run --rm -ti nvidia/cuda:8.0-cudnn5-devel nvcc --version 
