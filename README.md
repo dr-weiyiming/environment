@@ -122,6 +122,7 @@
     sudo make all –j8
     sudo make test –j8
     sudo make runtest –j8 
+    sudo make pycaffe -j8
                 1. libhdf5_hl.so.100: cannot open shared object file: No such file or directory
                     进入/etc/ld.so.conf.d目录
                     创建anaconda2.conf
