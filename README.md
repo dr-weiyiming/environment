@@ -110,6 +110,7 @@
                         MATLAB_DIR := /usr/local/MATLAB/R2014a
     sudo gedit Makefile
         NVCCFLAGS += -D_FORCE_INLINES -ccbin=$(CXX) -Xcompiler -fPIC $(COMMON_FLAGS)
+    // #error-- unsupported GNU version! gcc versions later than 4.9 are not supported!
     sudo make all –j8
     sudo make test –j8
     sudo make runtest –j8
