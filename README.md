@@ -135,7 +135,8 @@
                     pip install protobuf
     sudo make matcaffe -j8
     sudo make mattest -j8
-    ----------------------------------------------------------------------------------------------------------------------------
+ 
+错误一：   ----------------------------------------------------------------------------------------------------------------------------
         Invalid MEX-file '/home/wei/caffe/matlab/+caffe/private/caffe_.mexa64':
         /usr/local/MATLAB/R2014a/bin/glnxa64/../../sys/os/glnxa64/libstdc++.so.6: version `CXXABI_1.3.8' not found (required by
         /home/wei/caffe/matlab/+caffe/private/caffe_.mexa64)
@@ -146,5 +147,18 @@
         Error in caffe.run_tests (line 6)
         caffe.set_mode_cpu();
     ----------------------------------------------------------------------------------------------------------------------------
+错误二：
+
+
+参考 https://github.com/BVLC/caffe/issues/3934
+root@test222:/matlab/r2016a/bin/glnxa64# mv libopencv_imgproc.so.2.4 libopencv_imgproc.so.2.4.bak
+root@test222:/matlab/r2016a/bin/glnxa64# mv libopencv_highgui.so.2.4 libopencv_highgui.so.2.4.bak
+root@test222:/matlab/r2016a/bin/glnxa64# mv libopencv_core.so.2.4 libopencv_core.so.2.4.bak
+
+root@test222:/matlab/r2016a/bin/glnxa64# ln /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.9 libopencv_core.so.2.4
+root@test222:/matlab/r2016a/bin/glnxa64# ln /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.9 libopencv_highgui.so.2.4
+root@test222:/matlab/r2016a/bin/glnxa64# ln /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.9 libopencv_imgproc.so.2.4
+
+
 
 #### [sougou安装教程](http://blog.csdn.net/leijiezhang/article/details/53707181)
