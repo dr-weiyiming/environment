@@ -202,6 +202,12 @@
 
         Error in caffe.run_tests (line 6)
         caffe.set_mode_cpu();
-
+###### [解决三](http://blog.csdn.net/wxwpxh/article/details/50532533)
+        locate libfreetype.so
+            /usr/lib/x86_64-linux-gnu/libfreetype.so.6
+            /usr/lib/x86_64-linux-gnu/libfreetype.so.6.12.1
+        cd /usr/local/MATLAB/R2014a/bin/glnxa64
+        sudo rm libfreetype.so.6
+        sudo ln -s /usr/lib/x86_64-linux-gnu/libfreetype.so.6.12.1 libfreetype.so.6
 
 #### [sougou安装教程](http://blog.csdn.net/leijiezhang/article/details/53707181)
