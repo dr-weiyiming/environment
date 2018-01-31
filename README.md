@@ -136,7 +136,7 @@
     sudo make matcaffe -j8
     sudo make mattest -j8
  
-#### 错误一：   
+###### 错误一：   
         Invalid MEX-file '/home/wei/caffe/matlab/+caffe/private/caffe_.mexa64':
         /usr/local/MATLAB/R2014a/bin/glnxa64/../../sys/os/glnxa64/libstdc++.so.6: version `CXXABI_1.3.8' not found (required by
         /home/wei/caffe/matlab/+caffe/private/caffe_.mexa64)
@@ -146,7 +146,7 @@
 
         Error in caffe.run_tests (line 6)
         caffe.set_mode_cpu();
-#### 错误二：
+###### 错误二：
         Invalid MEX-file
         '/home/xw/caffeBuild/caffe-master/matlab/+caffe/private/caffe_.mexa64':
         /home/xw/caffeBuild/caffe-master/matlab/+caffe/private/caffe_.mexa64: undefined
@@ -158,7 +158,7 @@
 
         Error in caffe.run_tests (line 6)
         caffe.set_mode_cpu();
-#### 解决二： 
+###### 解决二： 
         参考 https://github.com/BVLC/caffe/issues/3934
         root@test222:/matlab/r2016a/bin/glnxa64# mv libopencv_imgproc.so.2.4 libopencv_imgproc.so.2.4.bak
         root@test222:/matlab/r2016a/bin/glnxa64# mv libopencv_highgui.so.2.4 libopencv_highgui.so.2.4.bak
