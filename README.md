@@ -149,26 +149,26 @@
     ----------------------------------------------------------------------------------------------------------------------------
 错误二：
 --------------------------------------------------------------------------------------------------------------------------
-Invalid MEX-file
-'/home/xw/caffeBuild/caffe-master/matlab/+caffe/private/caffe_.mexa64':
-/home/xw/caffeBuild/caffe-master/matlab/+caffe/private/caffe_.mexa64: undefined
-symbol:
-_ZN2cv8imencodeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_11_InputArrayERSt6vectorIhSaIhEERKSB_IiSaIiEE
+        Invalid MEX-file
+        '/home/xw/caffeBuild/caffe-master/matlab/+caffe/private/caffe_.mexa64':
+        /home/xw/caffeBuild/caffe-master/matlab/+caffe/private/caffe_.mexa64: undefined
+        symbol:
+        _ZN2cv8imencodeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_11_InputArrayERSt6vectorIhSaIhEERKSB_IiSaIiEE
 
-Error in caffe.set_mode_cpu (line 5)
-caffe_('set_mode_cpu');
+        Error in caffe.set_mode_cpu (line 5)
+        caffe_('set_mode_cpu');
 
-Error in caffe.run_tests (line 6)
-caffe.set_mode_cpu();
+        Error in caffe.run_tests (line 6)
+        caffe.set_mode_cpu();
 ----------------------------------------------------------------------------------------------------------------------------
-参考 https://github.com/BVLC/caffe/issues/3934
-root@test222:/matlab/r2016a/bin/glnxa64# mv libopencv_imgproc.so.2.4 libopencv_imgproc.so.2.4.bak
-root@test222:/matlab/r2016a/bin/glnxa64# mv libopencv_highgui.so.2.4 libopencv_highgui.so.2.4.bak
-root@test222:/matlab/r2016a/bin/glnxa64# mv libopencv_core.so.2.4 libopencv_core.so.2.4.bak
+    参考 https://github.com/BVLC/caffe/issues/3934
+    root@test222:/matlab/r2016a/bin/glnxa64# mv libopencv_imgproc.so.2.4 libopencv_imgproc.so.2.4.bak
+    root@test222:/matlab/r2016a/bin/glnxa64# mv libopencv_highgui.so.2.4 libopencv_highgui.so.2.4.bak
+    root@test222:/matlab/r2016a/bin/glnxa64# mv libopencv_core.so.2.4 libopencv_core.so.2.4.bak
 
-root@test222:/matlab/r2016a/bin/glnxa64# ln /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.9 libopencv_core.so.2.4
-root@test222:/matlab/r2016a/bin/glnxa64# ln /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.9 libopencv_highgui.so.2.4
-root@test222:/matlab/r2016a/bin/glnxa64# ln /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.9 libopencv_imgproc.so.2.4
+    root@test222:/matlab/r2016a/bin/glnxa64# ln /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.9 libopencv_core.so.2.4
+    root@test222:/matlab/r2016a/bin/glnxa64# ln /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.9 libopencv_highgui.so.2.4
+    root@test222:/matlab/r2016a/bin/glnxa64# ln /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.9 libopencv_imgproc.so.2.4
 
 
 
