@@ -91,8 +91,14 @@
   
 #### [gcc版本切换](http://blog.csdn.net/robertchenguangzhi/article/details/47837445)
 
-#### matlab创建快捷方式
-    ~/.bashrc中添加 export PATH=/usr/local/MATLAB/R2014a/bin:$PATH最终直接在终端输入’matlab’就可以打开Matlab
+#### Matlab安装：
+    sudo mkdir /media/matlab 
+    sudo mount -o loop [path]MATHWORKS_R2014A.iso /media/matlab 
+    cd /media/matlab 
+    sudo ./install
+    
+    创建快捷方式
+         ~/.bashrc中添加 export PATH=/usr/local/MATLAB/R2014a/bin:$PATH最终直接在终端输入’matlab’就可以打开Matlab
    
 #### caffe
     依赖
