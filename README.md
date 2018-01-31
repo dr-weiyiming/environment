@@ -184,8 +184,7 @@
 
         Error in caffe.run_tests (line 6)
         caffe.set_mode_cpu();
-###### 解决二： 
-        参考 https://github.com/BVLC/caffe/issues/3934
+###### [解决二](https://github.com/BVLC/caffe/issues/3934)
         root@test222:/usr/local/MATLAB/R2014a/bin/glnxa64# mv libopencv_imgproc.so.2.4 libopencv_imgproc.so.2.4.bak
         root@test222:/usr/local/MATLAB/R2014a/bin/glnxa64# mv libopencv_highgui.so.2.4 libopencv_highgui.so.2.4.bak
         root@test222:/usr/local/MATLAB/R2014a/bin/glnxa64# mv libopencv_core.so.2.4 libopencv_core.so.2.4.bak
