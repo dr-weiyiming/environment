@@ -193,6 +193,15 @@
         root@test222:/usr/local/MATLAB/R2014a/bin/glnxa64# sudo ln -sf /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.9 libopencv_highgui.so.2.4
         root@test222:/usr/local/MATLAB/R2014a/bin/glnxa64# sudo ln -sf /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.9 libopencv_imgproc.so.2.4
 
+###### 问题三
+        Invalid MEX-file '/home/wei/caffe/matlab/+caffe/private/caffe_.mexa64': /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0: undefined symbol:
+        FT_Face_GetCharVariantIndex
+
+        Error in caffe.set_mode_cpu (line 5)
+        caffe_('set_mode_cpu');
+
+        Error in caffe.run_tests (line 6)
+        caffe.set_mode_cpu();
 
 
 #### [sougou安装教程](http://blog.csdn.net/leijiezhang/article/details/53707181)
