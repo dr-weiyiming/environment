@@ -146,6 +146,32 @@
 
         Error in caffe.run_tests (line 6)
         caffe.set_mode_cpu();
+###### [解决一](http://blog.csdn.net/l297969586/article/details/76590055)
+        strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep 'CXXABI'
+        ---------------------------------------------------------------
+            CXXABI_1.3
+            CXXABI_1.3.1
+            CXXABI_1.3.2
+            CXXABI_1.3.3
+            CXXABI_1.3.4
+            CXXABI_1.3.5
+            CXXABI_1.3.6
+            CXXABI_1.3.7
+            CXXABI_1.3.8
+            CXXABI_1.3.9
+            CXXABI_TM_1
+            CXXABI_FLOAT128
+        ------------------------------------
+        参考解决方案中的anaconda换成matlab的思路，替换matlab的libstdc++.so.6，把系统的动态库拷贝到matlab中
+            #删除原来的libstdc++.so.6
+            sudo rm -rf anaconda3/lib/libstdc++.so.6
+            #拷贝新的动态库文件,注意自己的是哪个版本
+            sudo cp /usr/lib/libstdc++.so.6.0.21 /home/ubuntu/anaconda3/lib/
+        再建立软连接
+            cd anaconda3/lib/
+            sudo chmod +r libstdc++.so.6.0.21
+            sudo ln -sf libstdc++.so.6.0.21 libstdc++.so.6
+            sudo ldconfig
 ###### 错误二：
         Invalid MEX-file
         '/home/xw/caffeBuild/caffe-master/matlab/+caffe/private/caffe_.mexa64':
