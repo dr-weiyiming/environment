@@ -135,5 +135,16 @@
                     pip install protobuf
     sudo make matcaffe -j8
     sudo make mattest -j8
+    ----------------------------------------------------------------------------------------------------------------------------
+        Invalid MEX-file '/home/wei/caffe/matlab/+caffe/private/caffe_.mexa64':
+        /usr/local/MATLAB/R2014a/bin/glnxa64/../../sys/os/glnxa64/libstdc++.so.6: version `CXXABI_1.3.8' not found (required by
+        /home/wei/caffe/matlab/+caffe/private/caffe_.mexa64)
+
+        Error in caffe.set_mode_cpu (line 5)
+        caffe_('set_mode_cpu');
+
+        Error in caffe.run_tests (line 6)
+        caffe.set_mode_cpu();
+    ----------------------------------------------------------------------------------------------------------------------------
 
 #### [sougou安装教程](http://blog.csdn.net/leijiezhang/article/details/53707181)
