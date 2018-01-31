@@ -118,6 +118,7 @@
                         MATLAB_DIR := /usr/local/MATLAB/R2014a
     sudo gedit Makefile
         NVCCFLAGS += -D_FORCE_INLINES -ccbin=$(CXX) -Xcompiler -fPIC $(COMMON_FLAGS)
+        CXXFLAGS += -MMD -MP下面添加CXXFLAGS += -std=c++11
     sudo gedit /usr/local/cuda/include/host_config.h
     // #error-- unsupported GNU version! gcc versions later than 4.9 are not supported!
     sudo make all -j8
