@@ -164,9 +164,9 @@
         root@test222:/matlab/r2016a/bin/glnxa64# mv libopencv_highgui.so.2.4 libopencv_highgui.so.2.4.bak
         root@test222:/matlab/r2016a/bin/glnxa64# mv libopencv_core.so.2.4 libopencv_core.so.2.4.bak
 
-        root@test222:/matlab/r2016a/bin/glnxa64# ln /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.9 libopencv_core.so.2.4
-        root@test222:/matlab/r2016a/bin/glnxa64# ln /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.9 libopencv_highgui.so.2.4
-        root@test222:/matlab/r2016a/bin/glnxa64# ln /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.9 libopencv_imgproc.so.2.4
+        root@test222:/matlab/r2016a/bin/glnxa64# sudo ln -sf /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.9 libopencv_core.so.2.4
+        root@test222:/matlab/r2016a/bin/glnxa64# sudo ln -sf /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.9 libopencv_highgui.so.2.4
+        root@test222:/matlab/r2016a/bin/glnxa64# sudo ln -sf /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.9 libopencv_imgproc.so.2.4
 
 
 
