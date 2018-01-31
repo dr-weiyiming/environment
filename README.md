@@ -100,11 +100,20 @@
     sudo apt-get install --no-install-recommends libboost-all-dev
     sudo apt-get install libopenblas-dev liblapack-dev libatlas-base-dev
     sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
-    sudo gedit /etc/modprobe.d/blacklist.conf 加入blacklist nouveau
-    sudo update-initramfs -u 重启
-    sudo service lightdm stop
-    cd ~
-    sudo ./NVIDIA-Linux-x86_64-375.66.run --no-opengl-files --no-x-check --no-nouveau-check
-    sudo nvidia-smi
+    
+    sudo cp Makefile.config.example Makefile.config
+    sudo gedit Makefile.config 
+        USE_CUDNN := 1
+        WITH_PYTHON_LAYER := 1
+        INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/include/hdf5/serial
+        LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu/hdf5/serial   
+                        MATLAB_DIR := /usr/local/MATLAB/R2014a
+    sudo gedit Makefile
+        NVCCFLAGS += -D_FORCE_INLINES -ccbin=$(CXX) -Xcompiler -fPIC $(COMMON_FLAGS)
+    sudo make all –j8
+    sudo make test –j8
+    sudo make runtest –j8
+    sudo make matcaffe
+    sudo make mattest
 
 #### [sougou安装教程](http://blog.csdn.net/leijiezhang/article/details/53707181)
