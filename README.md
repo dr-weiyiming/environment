@@ -119,6 +119,9 @@
                     创建anaconda2.conf
                     输入/home/user/anaconda2/lib
                     输入命令sudo ldconfig立即命令生效
+                2. python caffe报错：No module named google.protobuf.internal
+                    sudo chmod 777 -R anaconda2
+                    pip install protobuf
     sudo make matcaffe
     sudo make mattest
 
