@@ -120,9 +120,9 @@
         NVCCFLAGS += -D_FORCE_INLINES -ccbin=$(CXX) -Xcompiler -fPIC $(COMMON_FLAGS)
     sudo gedit /usr/local/cuda/include/host_config.h
     // #error-- unsupported GNU version! gcc versions later than 4.9 are not supported!
-    sudo make all –j8
-    sudo make test –j8
-    sudo make runtest –j8 
+    sudo make all -j8
+    sudo make test -j8
+    sudo make runtest -j8 
     sudo make pycaffe -j8
                 1. libhdf5_hl.so.100: cannot open shared object file: No such file or directory
                     进入/etc/ld.so.conf.d目录
@@ -132,7 +132,7 @@
                 2. python caffe报错：No module named google.protobuf.internal
                     sudo chmod 777 -R anaconda2
                     pip install protobuf
-    sudo make matcaffe
-    sudo make mattest
+    sudo make matcaffe -j8
+    sudo make mattest -j8
 
 #### [sougou安装教程](http://blog.csdn.net/leijiezhang/article/details/53707181)
