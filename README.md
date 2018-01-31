@@ -113,7 +113,12 @@
     // #error-- unsupported GNU version! gcc versions later than 4.9 are not supported!
     sudo make all –j8
     sudo make test –j8
-    sudo make runtest –j8
+    sudo make runtest –j8 
+                1. libhdf5_hl.so.100: cannot open shared object file: No such file or directory
+                    进入/etc/ld.so.conf.d目录
+                    创建anaconda2.conf
+                    输入/home/user/anaconda2/lib
+                    输入命令sudo ldconfig立即命令生效
     sudo make matcaffe
     sudo make mattest
 
