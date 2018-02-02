@@ -126,10 +126,13 @@
     sudo make runtest -j8 
     sudo make pycaffe -j8
                 1. libhdf5_hl.so.100: cannot open shared object file: No such file or directory
-                    进入/etc/ld.so.conf.d目录
-                    创建anaconda2.conf
-                    输入/home/user/anaconda2/lib
-                    输入命令sudo ldconfig立即命令生效
+                    xxx 否定方案： 
+                        进入/etc/ld.so.conf.d目录，创建anaconda2.conf，输入/home/wei/anaconda2/lib，输入命令sudo ldconfig立即命令生效
+                    
+                    a方案：http://blog.csdn.net/dou3516/article/details/78210795
+                    b方案：http://blog.csdn.net/firethelife/article/details/51926754
+                    
+                                                                   
                 2. python caffe报错：No module named google.protobuf.internal
                     sudo chmod 777 -R anaconda2
                     pip install protobuf
