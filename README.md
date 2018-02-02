@@ -110,7 +110,7 @@
 #### Matlab安装：
     sudo mkdir /iso
     sudo mount -o loop [path]MATHWORKS_R2014A.iso /iso
-    cd /media/matlab 
+    cd /iso 
     sudo ./install
     sudo cp libmwservices.so /usr/local/MATLAB/R2014A/bin/glnxa64
     sudo do umount /iso
