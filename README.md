@@ -12,6 +12,33 @@
         --no-nouveau-check 安装驱动时不检查nouveau
         后面两个参数可不加。
     sudo nvidia-smi
+#### CUDA Toolkit
+    sudo ./cuda_8.0.44_linux.run 
+    sudo gedit ~/.bashrc 
+    export PATH=/usr/local/cuda-8.0/bin:$PATH
+    export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+    source ~/.bashrc
+   
+    cd /usr/local/cuda-8.0/samples/1_Utilities/deviceQuery
+    sudo make
+    ./deviceQuery
+#### cudnn [下载](https://developer.nvidia.com/rdp/cudnn-download)
+    cd cuda; 
+    sudo cp lib64/lib* /usr/local/cuda/lib64/; 
+    sudo cp include/cudnn.h /usr/local/cuda/include/  
+    更新软连接: cd /usr/local/cuda/lib64/
+    sudo chmod +r libcudnn.so.5.1.10
+    sudo ln -sf libcudnn.so.5.1.10 libcudnn.so.5
+    sudo ln -sf libcudnn.so.5 libcudnn.so
+    sudo ldconfig
+    
+#### opencv:
+    opencv-2.4.13
+    mkdir release
+    cd release
+    cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D CUDA_GENERATION=Kepler ..
+    sudo make -j8 #多核编译
+    sudo make install
 #### tensorflow
     选用版本：
     nvidia/cuda:8.0-cudnn5-devel
@@ -76,19 +103,7 @@
             Untagged: nvidia/cuda:8.0
             wei@wei-PC:~$ docker images ubuntu | tail -n +2 | awk '{ print $1 ":" $2}' | xargs docker rmi nvidia/cuda:7.0
             Untagged: nvidia/cuda:7.0
-
-
-
-#### [cudnn下载](https://developer.nvidia.com/rdp/cudnn-download)
-
-#### opencv:
-    opencv-2.4.13
-    mkdir release
-    cd release
-    cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D CUDA_GENERATION=Kepler ..
-    sudo make -j8 #多核编译
-    sudo make install
-  
+ 
 #### [gcc版本切换](http://blog.csdn.net/robertchenguangzhi/article/details/47837445)
 
 #### Matlab安装：
