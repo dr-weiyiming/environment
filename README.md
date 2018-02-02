@@ -34,6 +34,7 @@
     
 #### opencv:
     opencv-2.4.13
+    sudo apt-get install cmake
     mkdir release
     cd release
     cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D CUDA_GENERATION=Kepler ..
