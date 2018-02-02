@@ -166,7 +166,7 @@
 
         Error in caffe.run_tests (line 6)
         caffe.set_mode_cpu();
-###### [解决一](http://blog.csdn.net/l297969586/article/details/76590055)
+###### [解决一](https://www.cnblogs.com/xfzhang/archive/2011/10/14/2212486.html)
         strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep 'CXXABI'
         ---------------------------------------------------------------
             CXXABI_1.3
@@ -182,16 +182,12 @@
             CXXABI_TM_1
             CXXABI_FLOAT128
         ------------------------------------
-        参考解决方案中的anaconda换成matlab的思路，替换matlab的libstdc++.so.6，把系统的动态库拷贝到matlab中
-            #删除原来的libstdc++.so.6
-            sudo rm -rf anaconda3/lib/libstdc++.so.6
-            #拷贝新的动态库文件,注意自己的是哪个版本
-            sudo cp /usr/lib/libstdc++.so.6.0.21 /home/ubuntu/anaconda3/lib/
-        再建立软连接
-            cd anaconda3/lib/
-            sudo chmod +r libstdc++.so.6.0.21
-            sudo ln -sf libstdc++.so.6.0.21 libstdc++.so.6
-            sudo ldconfig
+        cd /usr/local/MATLAB/R2014a/sys/os/glnxa64
+        sudo mv libstdc++.so.6 libstdc++.so.6_bak
+        sudo cp /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21 /usr/local/MATLAB/R2014a/sys/os/glnxa64
+        sudo chmod +r libstdc++.so.6.0.21
+        sudo ln -sf libstdc++.so.6.0.21 libstdc++.so.6
+        sudo ldconfig
 ###### 错误二：
         Invalid MEX-file
         '/home/xw/caffeBuild/caffe-master/matlab/+caffe/private/caffe_.mexa64':
@@ -205,9 +201,9 @@
         Error in caffe.run_tests (line 6)
         caffe.set_mode_cpu();
 ###### [解决二](https://github.com/BVLC/caffe/issues/3934)
-        root@test222:/usr/local/MATLAB/R2014a/bin/glnxa64# mv libopencv_imgproc.so.2.4 libopencv_imgproc.so.2.4.bak
-        root@test222:/usr/local/MATLAB/R2014a/bin/glnxa64# mv libopencv_highgui.so.2.4 libopencv_highgui.so.2.4.bak
-        root@test222:/usr/local/MATLAB/R2014a/bin/glnxa64# mv libopencv_core.so.2.4 libopencv_core.so.2.4.bak
+        root@test222:/usr/local/MATLAB/R2014a/bin/glnxa64# sudo mv libopencv_imgproc.so.2.4 libopencv_imgproc.so.2.4.bak
+        root@test222:/usr/local/MATLAB/R2014a/bin/glnxa64# sudo mv libopencv_highgui.so.2.4 libopencv_highgui.so.2.4.bak
+        root@test222:/usr/local/MATLAB/R2014a/bin/glnxa64# sudo mv libopencv_core.so.2.4 libopencv_core.so.2.4.bak
 
         root@test222:/usr/local/MATLAB/R2014a/bin/glnxa64# sudo ln -sf /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.9 libopencv_core.so.2.4
         root@test222:/usr/local/MATLAB/R2014a/bin/glnxa64# sudo ln -sf /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.9 libopencv_highgui.so.2.4
@@ -227,7 +223,7 @@
             /usr/lib/x86_64-linux-gnu/libfreetype.so.6
             /usr/lib/x86_64-linux-gnu/libfreetype.so.6.12.1
         cd /usr/local/MATLAB/R2014a/bin/glnxa64
-        sudo rm libfreetype.so.6
+        sudo mv libfreetype.so.6 libfreetype.so.6_bak
         sudo ln -s /usr/lib/x86_64-linux-gnu/libfreetype.so.6.12.1 libfreetype.so.6
 
 #### [sougou安装教程](http://blog.csdn.net/leijiezhang/article/details/53707181)
