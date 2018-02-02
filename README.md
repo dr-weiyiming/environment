@@ -112,7 +112,7 @@
     sudo mount -o loop [path]MATHWORKS_R2014A.iso /iso
     cd /iso 
     sudo ./install
-    sudo cp libmwservices.so /usr/local/MATLAB/R2014A/bin/glnxa64
+    sudo cp libmwservices.so /usr/local/MATLAB/R2014a/bin/glnxa64
     sudo do umount /iso
     
     创建快捷方式
