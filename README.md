@@ -152,7 +152,7 @@
                                                                    
                 2. python caffe报错：No module named google.protobuf.internal
                     sudo chmod 777 -R anaconda2
-                    conda install protobuf
+                    ~/anaconda2/bin/pip install protobuf            not use (conda install protobuf)?
     sudo make matcaffe -j8
     sudo make mattest -j8
  
