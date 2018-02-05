@@ -1,6 +1,7 @@
 # Ubuntu
 
 #### Nividia Driver
+    卸载原有驱动： sudo ./NVIDIA-Linux-x86_64-375.66.run --uninstall
     sudo gedit /etc/modprobe.d/blacklist.conf
     最后一行加上 blacklist nouveau
     sudo update-initramfs -u 
