@@ -78,6 +78,11 @@
     文件挂载：
         例： docker run -it -v /home/wei/下载:/weiyiming nvidia:cuda8.0-cudnn5 /bin/bash
         通过-v参数，冒号前为宿主机目录，必须为绝对路径，冒号后为镜像内挂载的路径
+        
+    从主机复制到容器sudo docker cp host_path containerID:container_path
+    从容器复制到主机sudo docker cp containerID:container_path host_path
+            容器ID的查询方法想必大家都清楚:docker ps -a
+            
     更新容器：
         docker commit <容器id> <镜像名称>
     容器镜像删除
